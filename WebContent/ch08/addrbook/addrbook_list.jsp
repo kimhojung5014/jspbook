@@ -1,8 +1,8 @@
-<%@page import="addrbook.model.AddrBook"%>
+<%@page import="addrbook.model.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" errorPage="addrbook_error.jsp" import="java.util.*"%>
     
-  
+ <jsp:useBean id="datas" class="java.util.ArrayList" scope="page"></jsp:useBean>
      
 
 <!DOCTYPE html>
@@ -38,7 +38,7 @@
 			<%
 				
 				
-				for(AddrBook ab:(ArrayList<AddrBook>)request.getAttribute("datas")){
+				for(AddrBook ab:(ArrayList<AddrBook>)datas){
 
 			%>
 			

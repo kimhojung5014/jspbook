@@ -109,11 +109,11 @@ public class addrbook_control_servlet extends HttpServlet {
 			addrbook.setAb_id(Integer.parseInt(request.getParameter("ab_id")));
 			
 			if(ab.updateDB(addrbook)){
-				/*
-				 * request.setAttribute("ab", addrbook); RequestDispatcher dispatcher =
-				 * request.getRequestDispatcher("/jspbook/add?action=list");
-				 * dispatcher.forward(request, response);
-				 */
+				
+				  request.setAttribute("ab", addrbook); RequestDispatcher dispatcher =
+				  request.getRequestDispatcher("/jspbook/add?action=list");
+				  dispatcher.forward(request, response);
+				 
 				response.sendRedirect("ch08/addrbookServlet/index.jsp?");
 				System.out.println("변경완료");
 			}else{
